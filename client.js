@@ -11,11 +11,15 @@ const connect = function () {
   
   //creating on object when the client connects to the server
   conn.on("connect", () => {
+    console.log("Successfully connected to the game server")
   });
+  conn.on("connect", () => {
+    conn.write("Name: ps1");
+   });
   conn.on("data", (data) => {
     console.log(data);
   });
 
-  return conn;a
+  return conn;
 };
 module.exports = {connect,};
