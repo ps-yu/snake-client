@@ -13,9 +13,12 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to the game server")
   });
+  //Sending the username to the server
   conn.on("connect", () => {
     conn.write("Name: ps1");
    });
+  
+
   conn.on("data", (data) => {
     console.log(data);
   });
