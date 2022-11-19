@@ -16,6 +16,7 @@ const setupInput =  (conn) => {
   return stdin;
 };
 const handleUserInput = function (key) {
+  connection.write('Say: Go eat')
   if (key === '\u0003') {
     process.exit();
   }
