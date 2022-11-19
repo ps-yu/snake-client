@@ -8,11 +8,6 @@ const connect = function () {
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  
-  //creating on object when the client connects to the server
-  conn.on("connect", () => {
-    console.log("Successfully connected to the game server")
-  });
   //Sending the username to the server
   conn.on("connect", () => {
     conn.write("Name: ps1");
@@ -25,4 +20,4 @@ const connect = function () {
 
   return conn;
 };
-module.exports = {connect,};
+module.exports = connect;
